@@ -20,11 +20,13 @@ public class Erotus implements Komento {
 
     @Override
     public void peru() {
-
+        sovellus.undo();
+        tuloskentta.setText(sovellus.tulos() + "");
     }
 
     @Override
     public void suorita() {
+        sovellus.tallennaArvo();
         sovellus.miinus(Integer.parseInt(syotekentta.getText()));
         tuloskentta.setText(sovellus.tulos() + "");
     }

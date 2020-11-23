@@ -20,11 +20,13 @@ public class Nollaa implements Komento{
 
     @Override
     public void peru() {
-
+        sovellus.undo();
+        tuloskentta.setText(sovellus.tulos() + "");
     }
 
     @Override
     public void suorita() {
+        sovellus.tallennaArvo();
         sovellus.nollaa();
         tuloskentta.setText(sovellus.tulos() + "");
     }

@@ -21,11 +21,13 @@ public class Summa implements Komento{
 
     @Override
     public void peru() {
-
+        sovellus.undo();
+        tuloskentta.setText(sovellus.tulos() + "");
     }
 
     @Override
     public void suorita() {
+        sovellus.tallennaArvo();
         sovellus.plus(Integer.parseInt(syotekentta.getText()));
         tuloskentta.setText(sovellus.tulos() + "");
     }
